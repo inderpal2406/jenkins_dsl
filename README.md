@@ -9,3 +9,4 @@
 2. [description.j2](dsl/description.j2): Adding description to our job.
 3. [parameters.j2](dsl/parameters.j2): Defining string, boolean and choice parameters.
 4. [scm.j2](dsl/scm.j2): Define SCM.
+5. [triggers.j2](dsl/triggers.j2): Add build triggers (a periodic build here).
