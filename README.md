@@ -12,3 +12,4 @@
 5. [triggers.j2](dsl/triggers.j2): Add build triggers (a periodic build here).
 6. [shell_step_1.j2](dsl/shell_step_1.j2): Add shell execution build step with a single shell command.
 7. [shell_step_2.j2](dsl/shell_step_2.j2): Add shell execution build step with multiple shell commands.
+8. [mailer.j2](dsl/mailer.j2): Add post-build step of e-mail notification for failed builds.
