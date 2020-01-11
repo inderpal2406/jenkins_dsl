@@ -1,0 +1,23 @@
+job('dsl_job') {
+
+  description('This is a Jenkins DSL based job.')
+
+  parameters {
+    stringParam('Name', 'Inderpal Singh Saini', 'Full name of the person.')
+    booleanParam('Boolean_flag', true, 'Uncheck to make Boolean_flag parameter as false.')
+    choiceParam('Flower_choice', ['Rose (default)', 'Lotus', 'Sun flower'], 'Choices of flower available.')
+  }
+
+  scm {
+    git('https://github.com/inderpal2406/jenkins_dsl.git', 'master')
+  }
+
+  triggers {
+    cron('H 5 * * 7')
+  }
+
+  steps {
+    shell('echo "Hello World!"')
+  }
+
+}

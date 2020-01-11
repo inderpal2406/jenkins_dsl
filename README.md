@@ -10,3 +10,5 @@
 3. [parameters.j2](dsl/parameters.j2): Defining string, boolean and choice parameters.
 4. [scm.j2](dsl/scm.j2): Define SCM.
 5. [triggers.j2](dsl/triggers.j2): Add build triggers (a periodic build here).
+6. [shell_step_1.j2](dsl/shell_step_1.j2): Add shell execution build step with a single shell command.
+7. [shell_step_2.j2](dsl/shell_step_2.j2): Add shell execution build step with multiple shell commands.
