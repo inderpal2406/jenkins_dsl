@@ -1,0 +1,18 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo "This is first line."
+		sh 'echo "Hostname is $(hostname)."'
+		sh '''
+		    echo "Hello Inderpal."
+		    echo "You need to work hard."
+		    echo "Contents of current directory are as follows:"
+		    ls -lh
+                '''
+            }
+        }
+    }
+}
