@@ -10,3 +10,4 @@
 8. [timeout_pipeline_3](./timeout_pipeline_3): the command before timeout block was executed, the timeout block expired after timeout and the complete job was aborted. The retry block after timeout block in first stage was not executed. Also the next stage was not executed.
 9. [env_var_pipeline](./env_var_pipeline): how to set env vars for a job in jenkins using pipeline-as-code practices.
 10. [creds_pipeline](./creds_pipeline): to demonstrate handling of secrets in pipeline code.
+11. [post_action_pipeline](./post_action_pipeline): to demonstrate post actions in pipeline.
