@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+    
+    stages {
+        stage('Retry') {
+            steps {
+                sh 'echo "Before retry block."'
+                retry(3) {
+                    sh 'unameee -a'
+                }
+                sh 'echo "After retry block."'
+            }
+        }
+        stage('After-Retry') {
+            steps {
+                sh 'echo "After Retry stage."'
+            }
+        }
+    }
+}
