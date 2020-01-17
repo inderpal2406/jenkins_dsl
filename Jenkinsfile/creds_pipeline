@@ -1,0 +1,15 @@
+pipeline {
+    agent any
+    
+    environment {
+        mongo_pw = credentials('MONGO_PW')
+    }
+    
+    stages {
+        stage('display_mongo_password') {
+            steps {
+                sh 'echo "mongoDB password is $mongo_pw"'
+            }
+        }
+    }
+}
