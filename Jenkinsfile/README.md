@@ -8,3 +8,4 @@
 6. [timeout_pipeline_1](./timeout_pipeline_1): the step will timeout if the command takes more than a specified time interval.
 7. [timeout_pipeline_2](./timeout_pipeline_2): timeout block has more than one command, and timeout will consider cumulative time for all commands, if this cumulative time exceeds than the time interval set as timeout, then the step is aborted.
 8. [timeout_pipeline_3](./timeout_pipeline_3): the command before timeout block was executed, the timeout block expired after timeout and the complete job was aborted. The retry block after timeout block in first stage was not executed. Also the next stage was not executed.
+9. [env_var_pipeline](./env_var_pipeline): how to set env vars for a job in jenkins using pipeline-as-code practices.
