@@ -1,0 +1,22 @@
+pipeline {
+    agent any
+    
+    stages {
+        stage('Timeout') {
+            steps {
+                sh 'echo "This is first line."'
+                timeout(time: 3, unit: 'SECONDS') {
+                    sh 'sleep 5'
+                }
+                retry(3) {
+                    sh 'echo "Hello"'
+                }
+            }
+	}
+        stage('After-Timeout') {
+            steps {
+                sh 'echo "This statement is in After-Timeout stage"'
+            }
+        }
+    }
+}
