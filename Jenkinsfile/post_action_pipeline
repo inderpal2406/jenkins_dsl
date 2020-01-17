@@ -1,0 +1,26 @@
+pipeline {
+    agent any
+    
+    stages {
+        stage('Build') {
+            steps {
+                sh 'echo "Fail"; exit 1'
+            }
+        }
+    }
+    
+    post {
+        always {
+            sh 'echo "I will always be executed."'
+        }
+        success {
+            sh 'echo "I will be executed if job succeedes."'
+        }
+        failure {
+            sh 'echo "I will be executed if job fails."'
+        }
+        unstable {
+            sh 'echo "I will be executed ij job succeedes after failure."'
+        }
+    }
+}
